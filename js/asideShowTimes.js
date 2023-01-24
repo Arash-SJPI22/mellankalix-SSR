@@ -86,7 +86,7 @@ function createHTML(days, dates) {
             const li = document.createElement("li");
             const a = document.createElement("a");
 
-            a.href = "./movie.html#" + days[i][j].index;
+            a.href = "./movie#" + days[i][j].index;
             a.innerText = `${days[i][j].time} - ${days[i][j].movie.title}`
             li.appendChild(a);
             ul.appendChild(li);
