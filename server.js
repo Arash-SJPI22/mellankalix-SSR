@@ -4,7 +4,7 @@ const app = express();
 
 app.set("view engine", "ejs");
 
-app.get(["/", "/about", "/barAndBistro", "/comingPremieres", "/giftcertificate", "/movie", "/newsletter", "/open", "/placeholder"], (req, res) => {
+app.get(["/", "/about", "/barAndBistro", "/comingPremieres", "/giftcertificate", "/movie", "/newsletter", "/open", "/placeholder", "/ticketInfo", "/tickets"], (req, res) => {
 	if (req.url == "/") {
         res.render("index");
     } else {
