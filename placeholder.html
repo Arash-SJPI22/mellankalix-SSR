@@ -29,7 +29,7 @@
       <li>
         <div class="search-bx">
           <div class="search">
-            <input type="text" placeholder="Sök film..." id="search" data-search />
+            <input type="text" placeholder="Search movies..." id="search" data-search />
             <i class="material-symbols-outlined" id="search-icon">search</i>
             <div class="search-bx2" id="movies-filter"></div>
           </div>
@@ -119,52 +119,23 @@
   </nav>
 
   <main>
-    <section class="carousel">
-      <article class="carousel-item carousel-item-one active-left">
-        <div class="carousel-arrow carousel-item-prev"></div>
-        <div class="carousel-arrow carousel-item-next"></div>
-        <img class="carousel-item-image" src="" alt="" />
-        <div class="carousel-item-text-container">
-          <h3 class="carousel-item-header"></h3>
-          <p class="carousel-item-text"></p>
-          <a href="" class="carousel-item-button">Biljetter</a>
-        </div>
-      </article>
-      <article class="carousel-item carousel-item-two">
-        <div class="carousel-arrow carousel-item-prev"></div>
-        <div class="carousel-arrow carousel-item-next"></div>
-        <img class="carousel-item-image" src="" alt="" />
-        <div class="carousel-item-text-container">
-          <h3 class="carousel-item-header"></h3>
-          <p class="carousel-item-text"></p>
-          <a href="" class="carousel-item-button">Biljetter</a>
-        </div>
-      </article>
-      <article class="carousel-item carousel-item-three">
-        <div class="carousel-arrow carousel-item-prev"></div>
-        <div class="carousel-arrow carousel-item-next"></div>
-        <img class="carousel-item-image" src="" alt="" />
-        <div class="carousel-item-text-container">
-          <h3 class="carousel-item-header"></h3>
-          <p class="carousel-item-text"></p>
-          <a href="" class="carousel-item-button">Biljetter</a>
-        </div>
-      </article>
-    </section>
+    <section class="placeholder">
+      <img src="static/img/logo.svg" alt="logo">
+      <h2>Tomten är upptagen! Ho ho ho</h2>
+      <p>Tomten har haft mycket att göra under julen, det har varit ovanligt många olydiga elakingar i år, både stora
+        och små.
+        Så tomten har varit tvungen att dela ut hårda klappar med buller och bång. Därför har hans biograf hamnat efter
+        och de små tomtenissarna har inte hunnit med att få färdigt allt som stått på tomtens önskelistan om hans egna
+        biograf. Lyssna på vad tomten har att säga till de som funderar på om de ska vara snälla i år eller inte.
+      </p>
 
-    <section class="current-movies">
-      <h2 class="current-movies-header">På bion just nu</h2>
-      <ul class="current-movies-list">
-        <p>Laddar filmer ...</p>
-      </ul>
-    </section>
+      <button id="bad-santa-btn">Goda råd från Tomten</button>
+      <audio id="bad-santa" controls autoplay>
+        <source id="one" src="static/audio/1.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
 
-    <aside class="showtime">
-      <h2 class="showtime-header">VISNINGSTIDER</h2>
-      <ul class="showtime-showtimes">
-      </ul>
-      <button class="show-more-days">VISA FLERA DAGAR</button>
-    </aside>
+    </section>
   </main>
 
   <footer>
@@ -193,11 +164,9 @@
     </div>
   </footer>
   <script src="js/hamburgerMenu.js"></script>
+  <script src="js/badSanta.js"></script>
   <script src="js/navMenu.js"></script>
-  <script src="js/carousel.js" type="module"></script>
   <script src="js/search.js" type="module"></script>
-  <script src="js/asideShowTimes.js" type="module"></script>
-  <script src="index.js" type="module"></script>
 </body>
 
 </html>

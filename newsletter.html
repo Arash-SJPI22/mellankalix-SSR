@@ -118,53 +118,47 @@
     </ul>
   </nav>
 
-  <main>
-    <section class="carousel">
-      <article class="carousel-item carousel-item-one active-left">
-        <div class="carousel-arrow carousel-item-prev"></div>
-        <div class="carousel-arrow carousel-item-next"></div>
-        <img class="carousel-item-image" src="" alt="" />
-        <div class="carousel-item-text-container">
-          <h3 class="carousel-item-header"></h3>
-          <p class="carousel-item-text"></p>
-          <a href="" class="carousel-item-button">Biljetter</a>
-        </div>
-      </article>
-      <article class="carousel-item carousel-item-two">
-        <div class="carousel-arrow carousel-item-prev"></div>
-        <div class="carousel-arrow carousel-item-next"></div>
-        <img class="carousel-item-image" src="" alt="" />
-        <div class="carousel-item-text-container">
-          <h3 class="carousel-item-header"></h3>
-          <p class="carousel-item-text"></p>
-          <a href="" class="carousel-item-button">Biljetter</a>
-        </div>
-      </article>
-      <article class="carousel-item carousel-item-three">
-        <div class="carousel-arrow carousel-item-prev"></div>
-        <div class="carousel-arrow carousel-item-next"></div>
-        <img class="carousel-item-image" src="" alt="" />
-        <div class="carousel-item-text-container">
-          <h3 class="carousel-item-header"></h3>
-          <p class="carousel-item-text"></p>
-          <a href="" class="carousel-item-button">Biljetter</a>
-        </div>
-      </article>
-    </section>
+  <main class="newsletter-main">
 
-    <section class="current-movies">
-      <h2 class="current-movies-header">På bion just nu</h2>
-      <ul class="current-movies-list">
-        <p>Laddar filmer ...</p>
-      </ul>
-    </section>
+    <div class="news-letter">
+      <h2>Nyhetsbrev</h2>
+      <div class="news-letter-center">
 
-    <aside class="showtime">
-      <h2 class="showtime-header">VISNINGSTIDER</h2>
-      <ul class="showtime-showtimes">
-      </ul>
-      <button class="show-more-days">VISA FLERA DAGAR</button>
-    </aside>
+
+        <p>Vill du få bättre koll på våra biljettsläpp, premiärer och specialvisningar? Varannan torsdag skickar vi ut
+          ett nyhetsbrev proppat med filmnyheter! </p>
+        <button class="nyhetsbrev-button" id="sign-up">Anmäl dig</button>
+        <div id="modal-Id" class="modal">
+          <span class="close" title="Close Modal">&times;</span>
+          <form class="modal-content">
+            <div class="container">
+              <h1>Anmäl till nyhetsbrev</h1>
+              <p>Skriv in namn och emailadress</p>
+              <hr>
+              <label for="namn"><b>Namn</b></label>
+              <input id="input-name" type="text" placeholder="Ange namn" name="namn" data-input required>
+
+              <label for="email"><b>Email</b></label>
+              <input id="input-email" type="email" placeholder="Ange email" name="email" required>
+
+              <p>Genom att anmäla dig till vårt nyhetsbrev accepterar du våra <a href="#" style="color:dodgerblue">Terms
+                  & Privacy</a>.</p>
+
+              <div class="clear-fix">
+                <button type="button" class="cancel-btn nyhetsbrev-button">Avbryt</button>
+                <button type="submit" class="signup-btn">Anmäl dig</button>
+              </div>
+            </div>
+
+        </div>
+        </form>
+        <p>Så här kan nyhetsbrevet se ut:</p>
+        <img src="./static/img/nyhetsbrev.jpeg" alt="Exempel nyhetsbrev">
+        <p>Exemplet är från vecka 23.</p>
+
+      </div>
+
+    </div>
   </main>
 
   <footer>
@@ -192,12 +186,10 @@
       <img alt="Tomtemor" class="footer-image" />
     </div>
   </footer>
+  <script src="js/newsletter.js"></script>
   <script src="js/hamburgerMenu.js"></script>
   <script src="js/navMenu.js"></script>
-  <script src="js/carousel.js" type="module"></script>
   <script src="js/search.js" type="module"></script>
-  <script src="js/asideShowTimes.js" type="module"></script>
-  <script src="index.js" type="module"></script>
 </body>
 
 </html>
