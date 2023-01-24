@@ -1,4 +1,4 @@
-import { filterMovies } from "./js/filterMovies.js";
+import { filterMovies } from "./filterMovies.js";
 
 const displayRandomMovieList = async () => {
 	const movies = await filterMovies("onnow");
@@ -6,7 +6,7 @@ const displayRandomMovieList = async () => {
 	let htmlString = "";
 	for (let i = 0; i < 21; i++) {
 		const { image, title } = movies[i].movie;
-		htmlString += `<a href="./movie.html#${movies[i].index}">
+		htmlString += `<a href="./movie#${movies[i].index}">
             <li class="current-movies-card">
             <img src=${image} alt="${title} poster" class="current-movies-card-image" />
             <h3 class="current-movies-card-title">${title}</h3>
