@@ -1,0 +1,24 @@
+<%- include('./partials/header.ejs') %>
+
+<%- include('./partials/nav.ejs') %>
+
+<section class="rubrikus">
+    <h1>Fräshaste filmerna!</h1>
+    <ul>
+    <% if (movieList.length > 0) { %>
+        <% movieList.forEach(movie => { %>
+        <li>
+            <a href="myMovie/<%= movie.id %>"><%= movie.attributes.title %></a>
+        </li>
+        <% }) %>
+    <% } %>
+    </ul>
+</section>
+    
+<%- include('./partials/footer.ejs') %>
+
+<%- include('./partials/scripts.ejs') %>
+
+</body>
+
+</html>
