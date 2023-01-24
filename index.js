@@ -10,7 +10,7 @@ const displayRandomMovieList = async () => {
             <li class="current-movies-card">
             <img src=${image} alt="${title} poster" class="current-movies-card-image" />
             <h3 class="current-movies-card-title">${title}</h3>
-          </li></a>`;
+    		</li></a>`;
 	}
 	currentMoviesListEl.innerHTML = htmlString;
 };
