@@ -1,0 +1,64 @@
+<%- include('./partials/header.ejs') %>
+
+<%- include('./partials/nav.ejs') %>
+
+<main>
+    <section class="carousel">
+        <article class="carousel-item carousel-item-one active-left">
+            <div class="carousel-arrow carousel-item-prev"></div>
+            <div class="carousel-arrow carousel-item-next"></div>
+            <img class="carousel-item-image" src="" alt="" />
+            <div class="carousel-item-text-container">
+                <h3 class="carousel-item-header"></h3>
+                <p class="carousel-item-text"></p>
+                <a href="" class="carousel-item-button">Biljetter</a>
+            </div>
+        </article>
+        <article class="carousel-item carousel-item-two">
+            <div class="carousel-arrow carousel-item-prev"></div>
+            <div class="carousel-arrow carousel-item-next"></div>
+            <img class="carousel-item-image" src="" alt="" />
+            <div class="carousel-item-text-container">
+                <h3 class="carousel-item-header"></h3>
+                <p class="carousel-item-text"></p>
+                <a href="" class="carousel-item-button">Biljetter</a>
+            </div>
+        </article>
+        <article class="carousel-item carousel-item-three">
+            <div class="carousel-arrow carousel-item-prev"></div>
+            <div class="carousel-arrow carousel-item-next"></div>
+            <img class="carousel-item-image" src="" alt="" />
+            <div class="carousel-item-text-container">
+                <h3 class="carousel-item-header"></h3>
+                <p class="carousel-item-text"></p>
+                <a href="" class="carousel-item-button">Biljetter</a>
+            </div>
+        </article>
+    </section>
+
+    <section class="current-movies">
+        <h2 class="current-movies-header">På bion just nu</h2>
+        <ul class="current-movies-list">
+            <p>Laddar filmer ...</p>
+        </ul>
+    </section>
+
+    <aside class="showtime">
+        <h2 class="showtime-header">VISNINGSTIDER</h2>
+        <ul class="showtime-showtimes">
+        </ul>
+        <button class="show-more-days">VISA FLERA DAGAR</button>
+    </aside>
+</main>
+
+<%- include('./partials/footer.ejs') %>
+
+
+<%- include('./partials/scripts.ejs') %>
+<script src="js/carousel.js" type="module"></script>
+<script src="js/asideShowTimes.js" type="module"></script>
+<script src="js/index.js" type="module"></script>
+
+</body>
+
+</html>

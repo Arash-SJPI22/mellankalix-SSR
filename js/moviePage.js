@@ -82,7 +82,7 @@ const hashChange = async () => {
             <span class="movie-length">${length} min</span>
           </div>
     
-          <a href="tickets.html${hash}" class="movie-tickets">Biljetter</a>
+          <a href="tickets${hash}" class="movie-tickets">Biljetter</a>
         </li>
       `;
 		}
