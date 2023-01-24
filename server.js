@@ -1,4 +1,5 @@
 import express from "express";
+import { marked } from 'marked';
 import { getOneMovie, getAllMovies } from "./js/ssrAPI.js";
 
 const app = express();
@@ -21,12 +22,16 @@ app.get("/allMovies", async (req, res) => {
 app.get("/myMovie/:movieId", async (req, res) => {
     const movie = await getOneMovie(req.params.movieId);
     if (movie) {
-        res.render("myMovie", { movie });
+        res.render("myMovie", { title: movie.attributes.title, intro: marked.parse(movie.attributes.intro), image: movie.attributes.image.url });
     } else {
-        res.status(404).render("movie404");
+        res.status(404).render("404");
     }
 });
 
 app.use("/", express.static("./"));
+
+app.use((req, res) => {
+    res.status(404).render("404");
+});
 
 app.listen(5080);
