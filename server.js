@@ -1,4 +1,5 @@
 import express from "express";
+import { getOneMovie, getAllMovies } from "./js/ssrAPI.js";
 
 const app = express();
 
@@ -9,6 +10,20 @@ app.get(["/", "/about", "/barAndBistro", "/comingPremieres", "/giftcertificate",
         res.render("index");
     } else {
         res.render(req.url.slice(1));
+    }
+});
+
+app.get("/allMovies", async (req, res) => {
+    const movieList = await getAllMovies();
+    res.render("allMovies", { movieList });
+});
+
+app.get("/myMovie/:movieId", async (req, res) => {
+    const movie = await getOneMovie(req.params.movieId);
+    if (movie) {
+        res.render("myMovie", { movie });
+    } else {
+        res.status(404).render("movie404");
     }
 });
 
