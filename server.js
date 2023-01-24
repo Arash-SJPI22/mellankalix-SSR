@@ -4,8 +4,12 @@ const app = express();
 
 app.set("view engine", "ejs");
 
-app.get("/", (req, res) => {
-	res.render("index");
+app.get(["/", "/about"], (req, res) => {
+	if (req.url == "/") {
+        res.render("index");
+    } else {
+        res.render(req.url.slice(1));
+    }
 });
 
 app.use("/", express.static("./"));
