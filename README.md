@@ -1,54 +1,55 @@
-# Mellankalix
+Inlämningsuppgift
 
-Put pre-commit in your ".git/hooks/" folder (now updated to include main) - It prevents commits to main branch
-then in your console enter the command "chmod +x .git/hooks/pre-commit" to make it executeble!
+Spegeln, inlämning 1: Site med filmsidor från API
 
-## Whimsical
+Denna uppgift går ut på att på Spegeln-webbplatsen tillgängliggöra server-siderenderade filmsidor vars data kommer från ett API.
+Uppgiften
 
-https://whimsical.com/221219-SvobytXdHHMuUWwGDU1Tb1
+I förra kursen byggde ni i grupp en webbplats för biografen “Spegeln”. Nu ska du individuellt utgå från den webbplatsen (eller bygga nytt från scratch), och använda node för att serva hela webbplatsen, samt server-side rendering (SSR) för att rendera filmsidor.
+Moment
 
----
+    Serva hela sidan med hjälp av node på port 5080, exempelvis express och dess “middleware” för statiska filer eller med hjälp av server-siderendering för att återanvända mallar/templates
+    En sida ska vara en lista på filmer, där listan ska hämtas från ett API. Om en användare återkommer efter att fler filmer tillkommit ska det återspeglas på sidan.
+    Varje film ska ha en egen sida som visar titel, intro och bild
+    Använd följande API-resurser:
+        Filmer: https://plankton-app-xhkom.ondigitalocean.app/api/movies 
+        Enstaka film: https://plankton-app-xhkom.ondigitalocean.app/api/movies/<id> 
+    Det ska finnas ett integrationstest som verifierar att filmsidor visar rätt titel
+    För betyget Väl Godkänd krävs ytterligare tre moment:
+        En annan template-motor än Handlebars ska användas för att rendera hela webbplatsen, inkl filmsidorna. Gör research och välj en template-motor.
+        Filmernas intro-text ska renderas med hjälp av “markdown” för formatering
+        Försök att besöka en filmsida som inte existerar ska visa en felsida och svara med korrekt HTTP-status 404
 
-# GruppUppgift 2 – webbsida till Biograf
+Inlämning
 
-- Som team ska ni planera för en ny sajt för en liten oberoende biograf.
-- Varje grupp ska välja en ort där ni planerar att biografen etableras.
-- Utgångspunkt är Biograf ”Spegeln” i Malmö som har url biografspegeln.se
-- Fokus i uppgiften är genomförande av planeringen som Scrum-team: att från en produktidé bryta ner och skapa de PBI som ska ligga i projektets Product Backlog.
-- Från de PBI som ligger i Product Backlog ska sedan en Sprint-planering göras för en första sprint.
-- Den första sprinten ska påbörjas och för att få G måste tre minst PBI ha gått till ”Done” innan Sprint Review.
-- Ni som grupp rekommenderas att genomföra en ”Sprint Zero” under vecka 51 och att ni därefter i vecka 51, 52 och 1 arbetar med uppgiften. Uppgiften inkluderar Sprint Planning (t ex med planning poker) och en påbörjad Sprint Implementation.
-- Examinationen för gruppen sker med en Sprint Review som utförs på den punkt där ni befinner er. Ni meddelar när ni är redo att genomföra review men tillfällen är redan bokade i Teams 4 och 5 januari. Under review fokuserar vi på de PBI som är satt till ”done”, det innebär att alla planerade PBI inte måste vara implementerade. Men vi kommer också att diskutera hur ni i gruppen tycker att arbetet har gått. Deadline sätts till 2023-01-03, men behöver ni som grupp mer tid så kan ytterligare en dag ges. För grupper som inte alls hinner i mål, bokas tillfälle vecka 2 istället.
-- Ingen bedömning görs av nivån på koden.
-- Scrum ska användas som ramverk för agil projektmetod.
-- Projektverktyget ska vara GitHub Projects.
-- Alla pull request måste vara kopplade till en issue. Korten på tavlan ska vara konverterade till Issue och det är dessa som är PBI.
+Uppgiften lämnas in genom att koden publiceras på GitHub och en länk till repot skickas in via ItsLearning. Projektet ska gå att köra vid bedömningen. Node-projektet ska vara konfigurerat så att:
 
-![2022-12-20](https://user-images.githubusercontent.com/99484730/208618164-80927cb7-49ad-4108-b1b6-808f3884c83f.png)
+    Alla dependencies installeras när man kör “npm install” (måste finnas i package.json)
+    Servern går att starta med “npm start”
+    Test ska gå att köra med “npm test”
 
+Betygskriterier
 
-## Tekniska ramar för uppgiften
+På denna uppgift kan man få betygen underkänt, godkänt eller väl godkänt.
+Betyg Godkänd
 
-- Enbart ett statiskt FrontEnd. Det ska gå att visa sajten i GitHub Pages.
-- HTML, CSS/SASS och JavaScript.
-- Ramverk/bibliotek för styling får lov att användas. Men måste motiveras!
-- Det är ok att använda delar av uppgiften ”Hacker Escape Room” som bottenplatta.
-- JavaScript används utan ramverk.
-  Hjälpbibliotek är däremot tillåtna t ex Moment.js.
-- Information/data som återanvänds t ex information om filmer, hanteras i datafiler i JSON-format.
-- Biljettbokningsfunktionen ska planeras som en integrerad del av sajten och inte länka till en tredjepartslösning. (Denna funktion är så pass stor att vi kommer ha just biljettbokningen som en övning i en senare kurs.)
+Enligt kursplanen: För att få betyget Godkänt (G) ska den studerande ha genomfört kursen och nått alla kursens läranderesultat.
 
-## Betygskriterier
+Det betyder för denna uppgift:
 
-För att få Godkänt krävs följande
+    Källkod redovisad via GitHub
+    Projektet går att starta med npm start, varpå sidan går att besöka på http://localhost:5080
+    Filmsidorna så som de beskrivs i “Moment” går att besöka
+    Korrekt integrationstest går att köra med “npm test” och lyckas till 100%
 
-- Aktivt deltagande i planeringen av uppgiftens genomförande under ”Sprint Zero”. Visa på gruppens mötesanteckningar eller digital historik som visar din aktivitet.
-- Skapa fem PBI från WBS som läggs in som Issues i GitHub Project.
-- Aktivt deltagande i sprintplaneringen. Visa på gruppens mötesanteckningar eller digital historik som visar din aktivitet.
-- Gruppen ska genomföra en session med planning poker som del av sprintplaneringen. Syftet är att efteråt reflektera över fördelar och nackdelar med metoden. För att få G räcker det att ha deltagit planning poker sessionen.
-- Minst en PBI i sprinten ska programmeras och genom pull request från ”feature branch” mergas till huvudbranch.
-  PBI ska gå från ”todo” till ”done” i sprintens kanban-flöde och godkännas av Scrum team i Sprint review.
-- Vid avslutad Sprint eller Sprint Review ska sajt kunna demonstreras via GitHub Pages.
+Betyg Väl Godkänd
 
-Drift på GitHub Pages
-- Detta ger Godkänt
+Enligt kursplanen: För att få betyget Väl godkänt (VG) ska den studerande med hög kvalitet genomfört kursen och nått alla kursens läranderesultat.
+
+Den studerande har fördjupad kunskap och förståelse för webbapplikationer genom programmering på servern och vilken roll databaser och API:er har i en webbapplikation.
+
+Det betyder för denna uppgift, utöver kriterierna för godkänt:
+
+    Samtliga VG-moment är genomförda
+    Koden håller hög kvalitet avseende sådant som struktur, formatering, och “separation of concerns”
+
