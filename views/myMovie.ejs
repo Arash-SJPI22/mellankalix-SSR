@@ -2,23 +2,17 @@
 
 <%- include('./partials/nav.ejs') %>
 
-
 <section class="movie-details">
     <div>
 	    <h1 class="movie-title">
-            <%= movie.attributes.title %>
+            <%= title %>
         </h1>
 		<p class="movie-description">
-            <%= movie.attributes.intro %>
+            <%- intro %>
 		</p>
 	</div>
-    <img 
-        src="<%= movie.attributes.image.url %>"
-        alt="<%= movie.attributes.title %>"
-        class="movie-poster"
-    />
+    <img src="<%= image %>" alt="<%= title %>" class="movie-poster">
     
-
 </section>
 
 <%- include('./partials/footer.ejs') %>
