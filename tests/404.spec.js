@@ -18,13 +18,13 @@ test("Is there a 404 page for incorrect movie id page", async () => {
 
 test("Is there a 404 page for other pages", async () => {
     
-    const randArr = ["a", "g", "t", "ch", "m", "o", "l", "q"];
+    const randArr = ["kebab", "/", "fest", "kamel", "/", "mijau"];
     let randText = "";
-
-    for(let i=0; i < Math.floor(Math.random() * (randArr.length * (Math.floor(Math.random() * randArr.length) + 1))); i++) {
-        randText += randArr[Math.floor(Math.random() * (randArr.length - 1))];
+    
+    for(let i=0; i < 4; i++) {
+        randText += randArr[Math.floor(Math.random() * 5)];
     }
-
+    
     const respons = await request(app)
     .get("/" + randText)
     .expect("Content-Type", "text/html; charset=utf-8")
