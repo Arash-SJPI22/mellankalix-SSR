@@ -15,11 +15,6 @@ app.get("/", async (req, res) => {
     res.render("index", { movieList });
 });
 
-/* app.get("/allMovies", async (req, res) => {
-    const movieList = await getAllMovies();
-    res.render("allMovies", { movieList });
-}); */
-
 app.get("/myMovie/:movieId", async (req, res) => {
     const movie = await getOneMovie(req.params.movieId);
     if (movie) {
