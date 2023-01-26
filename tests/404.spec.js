@@ -25,7 +25,6 @@ test("Is there a 404 page for other pages", async () => {
         randText += randArr[Math.floor(Math.random() * (randArr.length - 1))];
     }
 
-    console.log(`404 PAGE TEST RANDTEXT = ${randText}\nRANDARR LENGTH = ${randArr.length}`);
     const respons = await request(app)
     .get("/" + randText)
     .expect("Content-Type", "text/html; charset=utf-8")
