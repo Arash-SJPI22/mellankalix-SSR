@@ -3,7 +3,7 @@
 <%- include('./partials/nav.ejs') %>
 
 <main>
-    <section class="carousel">
+    <section class="carousel" hidden="hidden">
         <article class="carousel-item carousel-item-one active-left">
             <div class="carousel-arrow carousel-item-prev"></div>
             <div class="carousel-arrow carousel-item-next"></div>
@@ -39,11 +39,20 @@
     <section class="current-movies">
         <h2 class="current-movies-header">På bion just nu</h2>
         <ul class="current-movies-list">
-            <p>Laddar filmer ...</p>
+            <% if (movieList.length > 0) { %>
+                <% movieList.forEach(movie => { %>
+                <a href="myMovie/<%= movie.id %>">
+                    <li class="current-movies-card">
+                        <img src="<%= movie.attributes.image.url %>" alt="<%= movie.attributes.title %>" class="current-movies-card-image" />
+                        <h3 class="current-movies-card-title"><%= movie.attributes.title %></h3>
+                    </li>
+                </a>
+                <% }) %>
+            <% } %>
         </ul>
     </section>
 
-    <aside class="showtime">
+    <aside class="showtime" hidden="hidden">
         <h2 class="showtime-header">VISNINGSTIDER</h2>
         <ul class="showtime-showtimes">
         </ul>
@@ -55,9 +64,9 @@
 
 
 <%- include('./partials/scripts.ejs') %>
-<script src="js/carousel.js" type="module"></script>
-<script src="js/asideShowTimes.js" type="module"></script>
-<script src="js/index.js" type="module"></script>
+<!-- <script src="js/carousel.js" type="module"></script> -->
+<!-- <script src="js/asideShowTimes.js" type="module"></script> -->
+<!-- <script src="js/index.js" type="module"></script> -->
 
 </body>
 
