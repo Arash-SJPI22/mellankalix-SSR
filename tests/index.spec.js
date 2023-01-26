@@ -2,7 +2,7 @@ import request from  "supertest";
 import app from "../js/app.js";
 import { getOneMovie, getAllMovies } from "../js/ssrAPI.js";
 
-test("Are all movies from the API displayed on index page", async () => {
+test("Are all movies from the API displayed on index page (checkes title)", async () => {
     const allMovies = await getAllMovies();
 
     for (let movie of allMovies) {
