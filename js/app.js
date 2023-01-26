@@ -23,7 +23,7 @@ app.get("/", async (req, res) => {
 app.get("/myMovie/:movieId", async (req, res) => {
     const movie = await getOneMovie(req.params.movieId);
     if (movie) {
-        res.render("myMovie", { title: movie.attributes.title, intro: marked.parse(movie.attributes.intro), image: movie.attributes.image.url });
+        res.render("myMovie", { title: movie.attributes.title, intro: marked.parseInline(movie.attributes.intro), image: movie.attributes.image.url });
     } else {
         res.status(404).render("404");
     }
