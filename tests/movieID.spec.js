@@ -1,6 +1,6 @@
 import request from  "supertest";
-import app from "../js/app.js";
-import { getOneMovie, getAllMovies } from "../js/ssrAPI.js";
+import app from "../src/app.js";
+import { getOneMovie, getAllMovies } from "../src/ssrAPI.js";
 
 test("Is the right movie displayed (checks title)", async () => {
     const allMovies = await getAllMovies(); 

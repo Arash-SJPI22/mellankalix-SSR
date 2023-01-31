@@ -24,7 +24,7 @@ app.get("/myMovie/:movieId", async (req, res) => {
     }
 });
 
-app.use("/", express.static("./"));
+app.use("/static", express.static("./static"));
 
 app.use((req, res) => {
     res.status(404).render("404");

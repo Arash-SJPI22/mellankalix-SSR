@@ -8,7 +8,7 @@
 		"sass": "sass --no-source-map scss/main.scss static/main.css",
 		"watch": "sass --no-source-map --watch scss/main.scss static/main.css",
 		"test": "cross-env NODE_OPTIONS=--experimental-vm-modules jest",
-		"start": "nodemon server.js"
+		"start": "nodemon ./src/server.js"
 	},
 	"repository": {
 		"type": "git",

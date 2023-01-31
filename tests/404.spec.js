@@ -1,6 +1,6 @@
 import request from  "supertest";
-import app from "../js/app.js";
-import { getAllMovies } from "../js/ssrAPI.js";
+import app from "../src/app.js";
+import { getAllMovies } from "../src/ssrAPI.js";
 
 const allMovies = await getAllMovies();
 

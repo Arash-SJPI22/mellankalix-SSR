@@ -11,35 +11,35 @@ btn.addEventListener("click", () => {
 
     switch(val) {
         case 1:
-            source.src = "static/audio/1.mp3"
+            source.src = "/static/audio/1.mp3"
         break;
 
         case 2:
-            source.src = "static/audio/2.mp3"
+            source.src = "/static/audio/2.mp3"
         break;
 
         case 3:
-            source.src = "static/audio/3.mp3"
+            source.src = "/static/audio/3.mp3"
         break;
 
         case 4:
-            source.src = "static/audio/4.mp3"
+            source.src = "/static/audio/4.mp3"
         break;
 
         case 5:
-            source.src = "static/audio/5.mp3"
+            source.src = "/static/audio/5.mp3"
         break;
 
         case 6:
-            source.src = "static/audio/6.mp3"
+            source.src = "/static/audio/6.mp3"
         break;
 
         case 7: 
-            source.src = "static/audio/7.mp3"
+            source.src = "/static/audio/7.mp3"
         break;
 
         default:
-            source.src = "static/audio/1.mp3"
+            source.src = "/static/audio/1.mp3"
         break;
     } 
 

@@ -4,7 +4,7 @@
 
 <main>
     <section class="placeholder">
-        <img src="static/img/logo.svg" alt="logo">
+        <img src="/static/img/logo.svg" alt="logo">
         <h2>Tomten är upptagen! Ho ho ho</h2>
         <p>Tomten har haft mycket att göra under julen, det har varit ovanligt många olydiga elakingar i år, både stora
             och små.
@@ -16,8 +16,8 @@
         </p>
 
         <button id="bad-santa-btn">Goda råd från Tomten</button>
-        <audio id="bad-santa" controls autoplay>
-            <source id="one" src="static/audio/1.mp3" type="audio/mpeg">
+        <audio id="bad-santa" controls>
+            <source id="one" src="/static/audio/1.mp3" type="audio/mpeg">
             Your browser does not support the audio element.
         </audio>
 
@@ -27,7 +27,7 @@
 <%- include('./partials/footer.ejs') %>
 
 <%- include('./partials/scripts.ejs') %>
-<script src="js/badSanta.js"></script>
+<script src="/static/js/badSanta.js"></script>
 
 </body>
 
